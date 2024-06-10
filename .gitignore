@@ -1,0 +1,15 @@
+.classpath
+.project
+.settings
+target
+test-output
+.DS_Store
+/bin/
+.idea
+out/
+.gradle
+build
+*.iml
+TestReport
+logs*
+*.exe

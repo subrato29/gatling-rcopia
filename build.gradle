@@ -1,0 +1,36 @@
+plugins {
+    id 'groovy'
+    id 'java'
+}
+group 'com.drfirst.rcopia.incubator'
+version '1.0-SNAPSHOT'
+
+repositories {
+    maven {
+        url = project.properties['maven.url']
+        allowInsecureProtocol = true
+    }
+    mavenCentral()
+    google()
+    maven {
+        url "https://repo.spring.io/libs-release"
+    }
+}
+
+dependencies {
+    implementation 'io.gatling:gatling-maven-plugin:4.9.4'
+    implementation 'io.gatling:gatling-recorder:3.9.5'
+    implementation 'io.gatling.highcharts:gatling-charts-highcharts:3.9.5'
+    implementation 'io.gatling:gatling-app:3.9.5'
+
+
+}
+
+test {
+    useTestNG()
+}
+
+tasks.register('updateGitHooks', Copy) {
+    from './scripts/pre-commit'
+    into './.git/hooks'
+}
