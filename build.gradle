@@ -22,7 +22,9 @@ dependencies {
     implementation 'io.gatling:gatling-recorder:3.9.5'
     implementation 'io.gatling.highcharts:gatling-charts-highcharts:3.9.5'
     implementation 'io.gatling:gatling-app:3.9.5'
-
+    implementation 'io.rest-assured:rest-assured:5.2.0'
+    implementation 'io.rest-assured:json-schema-validator:5.2.0'
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1'
 
 }
 
